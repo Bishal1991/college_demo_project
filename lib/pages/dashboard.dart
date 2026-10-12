@@ -5,10 +5,10 @@ class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
   @override
-  State<Dashboard> createState() => _dashboardState();
+  State<Dashboard> createState() => dashboardState();
 }
 
-class _dashboardState extends State<Dashboard> {
+class dashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -361,7 +361,17 @@ class _dashboardState extends State<Dashboard> {
                 ),
               ),
         
-              Column(
+              verticalScroll(size, context),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  static verticalScroll(Size size, BuildContext context) {
+    return Container(
+              child: Column(
                 children: [
                   Container(
                     margin: EdgeInsets.all(10),
@@ -430,9 +440,9 @@ class _dashboardState extends State<Dashboard> {
                                     },
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 40,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -507,9 +517,9 @@ class _dashboardState extends State<Dashboard> {
                                     onPressed: (){},
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 10,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -584,9 +594,9 @@ class _dashboardState extends State<Dashboard> {
                                     onPressed: (){},
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 10,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -661,9 +671,9 @@ class _dashboardState extends State<Dashboard> {
                                     onPressed: (){},
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 10,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -738,9 +748,9 @@ class _dashboardState extends State<Dashboard> {
                                     onPressed: (){},
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 10,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -815,9 +825,9 @@ class _dashboardState extends State<Dashboard> {
                                     onPressed: (){},
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 10,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -892,9 +902,9 @@ class _dashboardState extends State<Dashboard> {
                                     onPressed: (){},
                                     child: Text("see news", style: TextStyle(color: Colors.white),)
                                 ),
-              
+
                                 SizedBox(width: 10,),
-              
+
                                 Text("01, Jan 2000")
                               ],
                             )
@@ -906,11 +916,6 @@ class _dashboardState extends State<Dashboard> {
                   ),
                 ],
               ),
-        
-            ],
-          ),
-        ),
-      ),
-    );
+            );
   }
 }
