@@ -38,10 +38,15 @@ class _DetailPageState extends State<DetailPage> {
 
                   Padding(
                     padding: EdgeInsets.all(10),
-                    child: Icon(
-                      Icons.arrow_back,
-                      size: 40,
-                      color: Colors.white,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                        },
                     ),
                   ),
 
