@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newproject/controller/api_call.dart';
 import 'package:newproject/pages/newPage.dart';
 
 class Dashboard extends StatefulWidget {
@@ -9,6 +10,12 @@ class Dashboard extends StatefulWidget {
 }
 
 class dashboardState extends State<Dashboard> {
+
+  @override
+  void initState(){
+    super.initState();
+    ApiCall.getnewsdata();
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
